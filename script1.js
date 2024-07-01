@@ -1,5 +1,4 @@
-window.addEventListener('load', () => {
-    const navHeight = document.querySelector('.header-section').offsetHeight;
+ const navHeight = document.querySelector('.header-section').offsetHeight;
     const links = document.querySelectorAll('.a');
 
     links.forEach(link => {
@@ -21,6 +20,7 @@ window.addEventListener('load', () => {
     });
     const loader = document.getElementById('loader');
     const content = document.getElementById('content');
+    content.style.display='block';
 
     
     setTimeout(() => {
@@ -30,12 +30,9 @@ window.addEventListener('load', () => {
         setTimeout(() => {
             loader.style.display = 'none';
             
-            content.style.height= '100%';
         }, 10); 
-    }, 950); 
-});
+    }, 800); 
 
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   }
-
