@@ -15,22 +15,51 @@
   </head>
 
   <body>
+    <div id="loader">
+      <img src="./assets/logo.png" alt="" class="loader-img" />
+    </div>
     <div id="content">
-      <div id="loader">
-        <img src="logo.png" alt="" class="loader-img" />
+      <input type="checkbox" id="check" />
+      <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+      </label>
+      <div class="sidebar">
+        <img src="./assets/logo.png" alt="" class="logo" />
+        <a href="#home">
+          <span>Home</span>
+        </a>
+        <a href="#about">
+          <span>About</span>
+        </a>
+        <a href="#projects">
+          <span>Projects</span>
+        </a>
+        <a href="#skills">
+          <span>Skills</span>
+        </a>
+        <a href="./Mohamed_Dhia_Medini.pdf" target="_blank">
+          <span>Resume</span>
+          <i class="fa-solid fa-file-pdf" style="color: #8000d0"></i>
+        </a>
       </div>
+
       <header class="header-section">
-        <img src="logo.png" alt="" class="logo" />
+        <img src="./assets/logo.png" alt="" class="logo" />
         <nav class="nav">
-          <a href="#home" class="link">Home</a>
-          <a href="#about" class="link">About</a>
-          <a href="#projects" class="link">Projects</a>
-          <a href="#skills" class="link">Skills</a>
-          <a href="#" class="link"
-            >Resume
+          <a href="#home" class="link a">Home</a>
+          <a href="#about" class="link a">About</a>
+          <a href="#projects" class="link a">Projects</a>
+          <a href="#skills" class="link a">Skills</a>
+          <a
+            href="./Mohamed_Dhia_Medini.pdf"
+            target="_blank"
+            class="link"
+            rel="noopener noreferrer"
+          >
+            <span>Resume</span>
             <i class="fa-solid fa-file-pdf" style="color: #8000d0"></i>
           </a>
-          <a href="#contact" class="link">Contact</a>
         </nav>
       </header>
       <section id="home">
@@ -43,30 +72,24 @@
             </h1>
             <div class="icon-list">
               <a
-                href="https://www.linkedin.com/in/dhia-medini-1b1b3b1b3/"
+                href="https://www.linkedin.com/in/mohamed-dhia-medini/"
                 class="icon1"
                 ><i class="fab fa-linkedin"></i
               ></a>
-              <a
-                href="https://www.linkedin.com/in/dhia-medini-1b1b3b1b3/"
-                class="icon2"
+              <a href="https://github.com/Dhia9030" class="icon2"
                 ><i class="fab fa-github"></i
               ></a>
-              <a
-                href="https://www.linkedin.com/in/dhia-medini-1b1b3b1b3/"
-                class="icon3"
+              <a href="mailto:med.dhia.medini@gmail.com" class="icon3"
                 ><i class="fa-regular fa-envelope"></i
               ></a>
-              <a
-                href="https://www.linkedin.com/in/dhia-medini-1b1b3b1b3/"
-                class="icon4"
+              <a href="https://www.facebook.com/dhia.lewa9" class="icon4"
                 ><i class="fa-brands fa-facebook"></i>
               </a>
             </div>
           </div>
         </div>
 
-        <img src="p.png" alt="" class="home-img" />
+        <img src="./assets/p.png" alt="" class="home-img" />
       </section>
       <section id="about">
         <h1 class="about-title">About me</h1>
@@ -91,7 +114,9 @@
             <div class="project-info">
               <h1 class="project-name">GL-icious - Food Ordering Platform</h1>
               <p class="project-description">
-                A food ordering platform with admin dashboard
+                A food ordering platform to alleviate the searching, ordering ,
+                checkout processes with an Admin dashboard to track different
+                processes
               </p>
               <div class="project-links">
                 <a
@@ -117,7 +142,7 @@
               </div>
             </div>
             <div class="image-container">
-              <img src="p1-1.png" alt="" class="project1-img" />
+              <img src="./assets/p1-1.png" alt="" class="project1-img" />
             </div>
           </div>
         </div>

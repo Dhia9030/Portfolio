@@ -17,7 +17,7 @@ var typed2 = new Typed(".auto-type2", {
 
 window.addEventListener('load', () => {
     const navHeight = document.querySelector('.header-section').offsetHeight;
-    const links = document.querySelectorAll('header nav a');
+    const links = document.querySelectorAll('.a');
 
     links.forEach(link => {
         link.addEventListener('click', function(event) {
@@ -59,9 +59,9 @@ window.onbeforeunload = function () {
 
 
   const p1 = [
-    'p1-1.png',
-    'p1-2.png',
-    'p1-3.png',
+    './assets/p1-1.png',
+    './assets/p1-2.png',
+    './assets/p1-3.png',
 ];
 
 const firstImage = document.querySelector('.project1-img');

@@ -6,17 +6,46 @@
     inherits: false;
 }
 
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #8507df; 
+    border-radius: 10px;      
+    border: 2px solid #f0f0f0; 
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #6904b1;
+}
+
 :root{
     --clr-1 : #fff;
     --clr-2 : #c973e0;
     --clr-3 : #a91ffe ;
     --clr-4 : #f3d1f0;
     --clr-5 : #ddb1f9;
+    --accent-color: #fff;
+  --gradient-color: #FBFBFB;
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+#check,.sidebar,label{
+    display: none;
+
 }
 
 #loader {
@@ -61,7 +90,7 @@ body{
     overflow-x: hidden;
     font-family: Montserrat;
     background-color: #161a20;
-    background-image: url(bg1.png);
+    background-image: url(./assets/bg.png);
     background-color: rgba(22, 26, 32, 0.5);
     background-size: cover;
     background-position:center;
@@ -69,8 +98,6 @@ body{
     background-attachment: fixed;
     height: 100vh;
     display: block;
-    width: 100vw;
-
 
  
 
@@ -80,6 +107,7 @@ header{
     width:100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px 100px;
     background-color: #161a20;
     z-index: 100;
@@ -92,12 +120,7 @@ header{
     height:auto;
 }
 
-.nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-}
+
 .link  {
     text-align: center;
     align-content: center;
@@ -107,7 +130,7 @@ header{
     color: #ecd1fd;
     border-radius: 10px;
     font-size: 18px;
-    margin-left:10px;
+    padding:5px 20px;
     text-decoration: none;
     
 }
@@ -128,8 +151,7 @@ header{
 }
 .home-presentation{
     
-    min-height: 80%;
-        width: 100%;
+
     
     display: flex;
     flex-direction: column;
@@ -208,14 +230,9 @@ h1{
     
 }
 
-.iam{
-    color: #ffffff;
-    font-size: 37px;
-    margin-top: 10px;
-}
 
 .home-welcome{
-    margin-left:50px;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -234,7 +251,7 @@ h1{
 .icon-list{
     margin-top: 20px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     gap: 50px;
 
@@ -242,12 +259,7 @@ h1{
 
 .icon1,.icon2,.icon3,.icon4{
     
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-color: #161a20;
-    color: #f0bcec;
+
     font-size: 40px;
     text-decoration: none;
     transition: 0.3s ease;
@@ -317,7 +329,7 @@ h1{
 
 
 #skills{
-    padding-top: 20px;
+    padding-top: 0;
         height: 68%;
         width: 100%;
     
@@ -327,19 +339,19 @@ h1{
 
 
 #projects{
-    padding-top: 20px;
+    padding-top: 0;
     min-height: 100vh;
-    width: 100%;
-    background-size:300% 300%;
     background:#161a20;
     position: relative;
-    transform: translateZ(-1px)
+    transform: translateZ(-1px);
+    display:flex;
+    flex-direction: column;
 
    
 }
 
 .projects-title{
-    margin-top: 20px;
+    margin-top: 100px;
     color: #a91ffe;
     font-size: 50px;
     display: flex;
@@ -390,8 +402,13 @@ h1{
     opacity: 1;
     transform: translateX(0);
 }
-.project-description,.project-name{
+.project-description{
     width: 100%;
+    font-size: 16px;
+    text-align: center;
+}
+.project-name{
+    width: 80%;
     text-align: center;
 }
 
@@ -460,6 +477,7 @@ h1{
 
 }
 .project-info{
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -557,119 +575,235 @@ h1{
 
 @media (max-width: 1023px) {
 
-    html{
-        font-size: 10px;
-        
+    
+   .name,.welcome{
+         font-size: 25px;
+   }
+   .skilled{
+    font-size: 15px;
+}
+
+   .home-presentation{
+    text-align: center;
+   }
+   .icon1,.icon2,.icon3,.icon4{
+    font-size: 30px;
+    background: transparent;
+   }
+   #about{
+    height: 100%;
+   }
+
+   .about-me{
+    font-size: 15px;
+    padding: 10px;
+   }
+   #project1{
+
+    flex-direction: column;
+    gap: 20px;
+   }
+   .image-container{
+    width: 100%;
+   }
+
+   #skills{
+    
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+   }
+   .skills-container{
+    flex-direction: column;
+    align-items:center ;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+   }
+
+    #check,label,.sidebar{
+        display: block;
     }
-    #loader{
-        height: 100%;
-        width: 120%;
+
+    #home,#projects,#skills{
+        width: 100%;
+      
     }
-    .home-presentation{
-        
-        text-align: center;
-        height: 40%;
-        width: 80%;
-        display: flex;
+
+    .skills-container{
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        padding: 30px ;
-        margin-left: auto;
-        margin-right: auto;
-        
-        font-size: 10px;
-    
+        gap: 20px;
     }
-    .name{
-        font-size: 20px;
-
+    .skill{
+        margin: 0;
     }
-    .skilled{
-        font-size: 20px;
-    }
-    
-
     header{
-        padding: 10px 20px;
+        display: none;
+    }
 
+    .link{
+        font-size: 15px;
+        padding: 5px 10px;
     }
-    #about{
-        height:80%
+
+   #home{
+    margin-top: 100px;
+    flex-direction: column;
+   
+   
+   }
+   .home-welcome{
+    width:90%;
+   }
+   .home-presentation{
+    max-width: 100%;
+   }
+
+   
+
+
+
+
+
+
+
+   .project-description{
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+}
+    .project-name{
+    width: 100%;
+    text-align: center;
+}
+    .project-info{
+    width: 100%;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .sidebar{
+    z-index: 999;
+    position: fixed;
+    width: 180px;
+    left: -240px;
+    height: 100%;
+    background-color: #161a20;
+    transition: all .5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top:0;
+    justify-content: space-evenly;
+  }
+  .sidebar>img{
+    z-index: 9999;
+    font-size: 28px;
+    color: #fff;
+    text-align: center;
+    background-color: #161a20 ;
+    user-select: none;
+    margin-top: 20px;
+  }
+
+  .sidebar>a{
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+
     
-
-    .link  {
+  }
+  #check{
+    transform: translateZ(999px);
+    display: none;
+  }
+   label{
+        top:10px;
+        position: absolute;
         
+    }   
+  label #btn,label #cancel{
+    position: absolute;
+    left: 5px;
+    cursor: pointer;
+    color: #d6adff;
+    border-radius: 5px;
+    margin: 15px 30px;
+    font-size: 29px;
+    background-color: #e8d1ff;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+      inset -7px -7px 10px 0px rgba(0,0,0,.1),
+     3.5px 3.5px 20px 0px rgba(0,0,0,.1),
+     2px 2px 5px 0px rgba(0,0,0,.1);
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+    line-height: 45px;
+    transition: all .5s ease;
+    z-index: 999;
+    position: fixed;
+  }
+  label #cancel{
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+    position: fixed;
+  }
+  #check:checked ~ .sidebar{
+    left: 0;
+  }
+  #check:checked ~ label #btn{
+    margin-left: 245px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+    position: fixed;
+  }
+  #check:checked ~ label #cancel{
+    margin-left: 245px;
+    opacity: 1;
+    visibility: visible;
+    z-index: 999;
+    position: fixed;
+  }
+  
+  
+  .sidebar > a{
+        text-align: center;
+        align-content: center;
         
-        height:25px;
-        width:50px;
+        height:40px;
+        width:120px;
         color: #ecd1fd;
         border-radius: 10px;
-        font-size: 10px;
-        margin-left:1px;
+        font-size: 18px;
+        padding:5px 20px;
         text-decoration: none;
-        
-    }
-    .logo{
-        width:50px;
-        height:auto;
-    }
-
-    #home{
-        padding-top: 60px;
-        font-size : 2.2em;
-        display: block;
-        align-self: center;
-        
-
-    }
-    .welcome{
-
-        font-size: 20px;
-    }
-    .about-title{
-        font-size: 25px;
-    }
-    .about-me{
-        font-size: 15px;
-        line-height: 30px;
-    }
-    .icon-list{
-        gap: 10px;
-        
-    }
-    .icon1,.icon2,.icon3,.icon4{
-        font-size: 30px;
-    }
-
-    
-    .home-img{
-        max-width: 45%;
-        height: auto;
-        margin-left: auto;
-        margin-right: auto;
-        
-        
-        
-        
-    }
-    .home-welcome{
-        margin-left:0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap:10px;
     
     
-    }
 
-
-    .about-me{
-        width: 90%;
-        padding:30px;
-    }
-
+  }
+  .sidebar>a:hover{
+    background : linear-gradient(to bottom right , #f0bcec,#c583ee);
+    color: #161a20;
+}
+  
+  
 }
