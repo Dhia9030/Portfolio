@@ -11,6 +11,8 @@
 }
 
 
+
+
 ::-webkit-scrollbar-track {
     background: #ffffff;
 }
@@ -48,7 +50,21 @@
 
 }
 
+#content{
+    display: block;
+}
+
+@keyframes fadeOut {
+    0%, 95% { 
+        opacity: 1;
+    }
+    100% { 
+        opacity: 0;
+    }
+}
+
 #loader {
+    z-index: 9999;
     position: fixed;
     top: 0;
     left: 0;
@@ -59,13 +75,14 @@
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    transition: opacity 0.3s ease-out;
+    opacity: 1;
+    animation: fadeOut 1.3s ease forwards;
 }
 
 .loader-img{
     width: 200px;
     height: auto;
-    animation: logo-animation 1s  ease-in-out forwards;
+    animation: logo-animation 1.2s  ease-in-out forwards;
 
 }
 
@@ -98,6 +115,7 @@ body{
     background-attachment: fixed;
     height: 100vh;
     display: block;
+    
 
  
 

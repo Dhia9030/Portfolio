@@ -18,20 +18,10 @@
             }
         });
     });
-    const loader = document.getElementById('loader');
-    const content = document.getElementById('content');
-    content.style.display='block';
+
 
     
-    setTimeout(() => {
-        loader.style.opacity = '0';
 
-       
-        setTimeout(() => {
-            loader.style.display = 'none';
-            
-        }, 10); 
-    }, 800); 
 
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
