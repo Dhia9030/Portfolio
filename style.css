@@ -65,7 +65,7 @@
 .loader-img{
     width: 200px;
     height: auto;
-    animation: logo-animation 2s  ease-in-out forwards;
+    animation: logo-animation 1s  ease-in-out forwards;
 
 }
 
@@ -130,7 +130,7 @@ header{
     color: #ecd1fd;
     border-radius: 10px;
     font-size: 18px;
-    padding:5px 20px;
+    padding:9px 20px;
     text-decoration: none;
     
 }

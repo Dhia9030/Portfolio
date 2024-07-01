@@ -32,7 +32,7 @@ window.addEventListener('load', () => {
             
             content.style.height= '100%';
         }, 10); 
-    }, 1500); 
+    }, 950); 
 });
 
 window.onbeforeunload = function () {
