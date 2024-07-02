@@ -165,6 +165,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 50px;
     
     
 }
@@ -307,7 +308,7 @@ h1{
 #about{
   
     padding-top: 20px;
-    height: 60%;
+    height: 70vh;
     width: 100%;
     
     display: flex;
@@ -349,7 +350,7 @@ h1{
 
 #skills{
     padding-top: 0;
-        height: 68%;
+        min-height: 90vh;
         width: 100%;
     
     
@@ -598,8 +599,13 @@ h1{
    .name,.welcome{
          font-size: 25px;
    }
+
+   .welcome{
+    font-size: 32px;
+    text-align: center;
+}
    .skilled{
-    font-size: 15px;
+    font-size: 20px;
 }
 
    .home-presentation{
@@ -647,6 +653,7 @@ h1{
 
     #home,#projects,#skills{
         width: 100%;
+        padding-bottom: 30px;
       
     }
 
@@ -667,7 +674,7 @@ h1{
     }
 
    #home{
-    margin-top: 100px;
+    margin-top: 70px;
     flex-direction: column;
    
    
@@ -823,6 +830,7 @@ h1{
     background : linear-gradient(to bottom right , #f0bcec,#c583ee);
     color: #161a20;
 }
-  
-  
+
 }
+
+
