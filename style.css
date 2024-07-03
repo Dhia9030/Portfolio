@@ -595,7 +595,9 @@ h1{
 
 @media (max-width: 1023px) {
 
-    
+    #loader{
+        display:none;
+    } 
    .name,.welcome{
          font-size: 25px;
    }
